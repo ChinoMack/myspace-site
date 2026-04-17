@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Myspace</title>
+</head>
+
+<body>
+
+  <div class="master-container">
+
+    <!-- Main Header Begins -->
+    <header class="main-header">
+      <nav class="search-bar">
+
+        <ul class="topnav home">
+          <li><a href="#">MySpace.com</a></li>
+          <li><a href="#">Home</a></li>
+        </ul>
+
+        <form>
+          <label>
+            The Web
+            <input type="radio" name="search-type" value="the-web">
+          </label>
+
+          <label>
+            MySpace
+            <input type="radio" name="search-type" value="myspace">
+          </label>
+
+          <label>
+            <input type="text" name="search">
+          </label>
+
+          <input class="submit-btn" type="submit" name="submit-button" value="Search">
+        </form>
+
+        <ul class="topnav signup">
+          <li><a href="#">Help</a></li>
+          <li><a href="#">SignUp</a></li>
+        </ul>
+      </nav>
+
+      <nav class="navbar">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Browse</a></li>
+          <li><a href="#">Search</a></li>
+          <li><a href="#">Invite</a></li>
+          <li><a href="#">Film</a></li>
+          <li><a href="#">Mail</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Favorites</a></li>
+          <li><a href="#">Forum</a></li>
+          <li><a href="#">Groups</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Videos</a></li>
+          <li><a href="#">Music</a></li>
+          <li><a href="#">Classifieds</a></li>
+        </ul>
+      </nav>
+
+    </header>
+    <!-- Main Header Ends -->
+
+    <div class="page-content-container">
+
+      <!-- Profile Sidebar Begins -->
+      <aside class="profile-sidebar">
+
+        <header>
+          <h1>Valentino Chavez</h1>
+        </header>
+
+        <!-- Profile Picture -->
+        <div class="profile-picture-container">
+          <img class="profile-pic" src="pictures/your-photo.jpg" alt="A profile picture of Tom, the creator of MySpace.">
+
+          <p class="personal-msg"><b>"What it doooo"</b></p>
+
+          <ul class="gender-age">
+            <li>Male</li>
+            <li>30 years old</li>
+            <li>Bay Area,</li>
+            <li>CALIFORNIA</li>
+            <li>United States</li>
+          </ul>
+
+          <ul class="last-login">
+    <li>Last Login:</li>
+    <li id="lastLoginDate"></li>
+  </ul>
+
+  <script>
+    function getMyspaceLogin() {
+      const now = new Date();
+      const rand = Math.random();
+
+      let text = "";
+
+      if (rand < 0.25) {
+        const mins = Math.floor(Math.random() * 59) + 1;
+        text = mins + " minute" + (mins > 1 ? "s" : "") + " ago";
+      } else if (rand < 0.5) {
+        const hours = Math.floor(Math.random() * 23) + 1;
+        text = hours + " hour" + (hours > 1 ? "s" : "") + " ago";
+      } else if (rand < 0.7) {
+        text = "Yesterday";
+      } else if (rand < 0.9) {
+        const days = Math.floor(Math.random() * 5) + 2;
+        text = days + " days ago";
+      } else {
+        const past = new Date();
+        past.setDate(now.getDate() - Math.floor(Math.random() * 14));
+
+        text =
+          (past.getMonth() + 1) + "/" +
+          past.getDate() + "/" +
+          past.getFullYear();
+      }
+
+      document.getElementById("lastLoginDate").textContent = text;
+    }
+
+    getMyspaceLogin();
+  </script>
+
+          <p class="pics-videos">View My: <a href="#"><b>Pics</b></a> | <a href="#"><b>Videos</b></a></p>
+        </div>
+
+        <!-- Contact Box -->
+        <section class="contact-box">
+          <h2>Contacting Valentino</h2>
+
+          <figure class="contact-images">
+  <a href="#"><img src="pictures/sendMailIcon.gif" alt="Send Message"></a>
+  <a href="#"><img src="pictures/forwardMailIcon.gif" alt="Forward to Friend"></a>
+  <a href="#"><img src="pictures/addFriendIcon.gif" alt="Add to Friends"></a>
+  <a href="#"><img src="pictures/addFavoritesIcon.gif" alt="Add to Favorites"></a>
+  <a href="#"><img src="pictures/messagefriend.gif" alt="Instant Message"></a>
+  <a href="#"><img src="pictures/blockUser.gif" alt="Block User"></a>
+  <a href="#"><img src="pictures/addToGroupIcon.gif" alt="Add to Group"></a>
+  <a href="#"><img src="pictures/rankUserIcon.gif" alt="Rank User"></a>
+</figure>
+        </section>
+
+        <!-- MySpace URL -->
+        <section class="myspace-url-box">
+          <h3><b>MySpace URL:</b></h3>
+          <p>http://www.myspace.com/Valentino</p>
+        </section>
+
+        <!-- Interests Section -->
+        <section class="interests">
+          <table class="sidebar-table">
+
+            <caption>
+              <h2 class="sidebar-table-h2">Valentino's Interests</h2>
+            </caption>
+
+            <tbody>
+              <tr>
+                <th class="sidebar-table-header" scope="row">General</th>
+                <td class="sidebar-table-data">
+                  <p>Internet, Movies, Computers, Retro Tech, Music, Basketball, Travel, Culture, History, Philosophy, Writing, Running, Hiking, Weight Lifting, Foodie, Working, Camping, Building alternate communities</p>
+                </td>
+              </tr>
+
+              <tr>
+                <th class="sidebar-table-header" scope="row">Video Games</th>
+                <td class="sidebar-table-data">
+                  <p>War of the Monsters, Crash Bandicoot, Jack and Daxter, Tony Hawk Underground, Ratchet and Clank, Dragon Ball Z Tenkaichi, Def Jam Fight for NY, Pokemon Red, Super Smash Bros. Melee, Fight Night Round 3, Midnight Club 3: Dub Edition, Dave Mirra Freestyle BMX 2, Mario Sunshine, Luigi's Mansion, SSX, Spyro</p>
+                </td>
+              </tr>
+
+              <tr>
+                <th class="sidebar-table-header" scope="row">Music</th>
+                <td class="sidebar-table-data">
+                  <p><b>Bands</b>: Kolohe Kai, The Marias, Thee Sacred Souls, The Sinseers, Weezer, Outkast, Orangutang, Journey</p>
+
+                  <p><b>Solo Artists</b>: Mac Miller, Post Malone, Lorde, Khalid, Elujay, Bill Withers, Bob Seger, Israel Kamakawiwoʻole, Tyler The Creator, Frank Ocean, Daniel Ceaser, Mr. Skweenz </p>
+
+
+                  <p><b>Instruments</b>: Alto Saxophone, Piano</p>
+                </td>
+              </tr>
+
+              <tr>
+                <th class="sidebar-table-header" scope="row">Movies</th>
+                <td class="sidebar-table-data">
+                  <p><b>Films</b>: The Departed, The Cable Guy, Good Will Hunting, 50 First Dates, Click, Radio, One Flew Over the Cuckoo's Nest, Harry Potter, Halloween, Friday the 13th, Children Of The Corn, Spider-man, Short Circuit, Small Soldiers, The Iron Giant, The Prince of Egypt, Brother Bear, Lion King, Tarzan, Mulan </p>
+
+              </tr>
+
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Valentino's Details Section -->
+        <section class="details">
+          <table class="sidebar-table">
+
+            <caption>
+              <h2 class="sidebar-table-h2">Valentino's Details</h2>
+            </caption>
+
+            <tbody>
+              <tr>
+                <th class="sidebar-table-header" scope="row">Status:</th>
+                <td class="sidebar-table-data">In a relationship</td>
+              </tr>
+
+              <tr>
+                <th class="sidebar-table-header" scope="row">Here For:</th>
+                <td class="sidebar-table-data">Networking, Business Contacts, Nostalgia</td>
+              </tr>
+
+              <tr>
+                <th class="sidebar-table-header" scope="row">Hometown:</th>
+                <td class="sidebar-table-data">San Francisco</td>
+              </tr>
+
+              <tr>
+                <th class="sidebar-table-header" scope="row">Ethnicity:</th>
+                <td class="sidebar-table-data">Hispanic / Latino</td>
+              </tr>
+
+              <tr>
+                <th class="sidebar-table-header" scope="row">Zodiac Sign:</th>
+                <td class="sidebar-table-data">Aries</td>
+              </tr>
+
+              <tr>
+                <th class="sidebar-table-header" scope="row">Smoke / Drink:</th>
+                <td class="sidebar-table-data">Yes / Yes</td>
+              </tr>
+
+              <tr>
+                <th class="sidebar-table-header" scope="row">Occupation:</th>
+                <td class="sidebar-table-data">Internet Technician</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Valentino's Schools Section -->
+        <section class="schools">
+          <table class="sidebar-table">
+
+            <caption>
+              <h2 class="sidebar-table-h2">Tom's Schools</h2>
+            </caption>
+
+            <tbody>
+              <tr>
+                <th class="sidebar-table-header" scope="row">
+                  <ul>
+                    <li><a href="#">Cappuchino High School</a></li>
+                    <li>San Bruno, CALIFORNIA</li>
+                    <li>Graduated: <a href="#">2014</a></li>
+                    <li>Degree: High School Diploma</li>
+                    <li>Major: Business</li>
+                  </ul>
+                </th>
+                <td class="sidebar-table-data">2012 to 2014</td>
+              </tr>
+
+              <tr>
+                <th class="sidebar-table-header" scope="row">
+                  <ul>
+                    <li><a href="#">Arroyo High School</a></li>
+                    <li>San Lorenzo, CALIFORNIA</li>
+                    <li>Graduated: <a href="#">2012</a></li>
+                    <li>Student status: Alumni</li>
+                    <li>Degree: High School Diploma</li>
+                    <li>Major: Computer Science</li>
+                    <li>Clubs: Photography</li>
+                  </ul>
+                </th>
+                <td class="sidebar-table-data">2010 to 2012</td>
+              </tr>
+
+            </tbody>
+          </table>
+
+        </section>
+      </aside>
+      <!-- Profile Side Bar Ends -->
+
+      <!-- Main Section -->
+      <main>
+
+        <section class="user-network">
+          <header>
+            <h2>Valentino is in your extended network</h2>
+          </header>
+        </section>
+
+        <section class="blog">
+            <h3>Valentino's Latest Blog Entry <a href="#">[Subscribe to this Blog]</a></h3>
+
+  <p>Y2k computer builds + retro setup ideas 
+  <a href="#">(view more)</a>
+</p>
+
+<p>What i’ve been listening to lately… throwback music 
+  <a href="#">(view more)</a>
+</p>
+
+<p>Old youtube videos that still live in my head 
+  <a href="#">(view more)</a>
+</p>
+
+<p>Ps2 era gaming will never be topped 
+  <a href="#">(view more)</a>
+</p>
+
+<p>Starting my game project “Lorenzo” - dev log #1 
+  <a href="#">(view more)</a>
+</p>
+
+<p>Bringing back early 2000s internet vibes 
+  <a href="#">(view more)</a>
+</p>
+  <p><a href="#">[View All Blog Entries]</a></p>        </section>
+
+        <section class="blurbs">
+          <header class="main-section-header">
+            <h2 class="main-section-h2">Valentino's Blurbs</h2>
+          </header>
+
+        <h3>About me:</h3>
+<p>I’m here to bring back the feeling of the <b>early 2000s internet</b> — when everything was new, creative, and a little chaotic in the best way.</p>
+
+<p>This page is all about <b>nostalgia core</b> — music, YouTube, retro gaming, anime, and everything that made growing up online back then so memorable. <span class="info">If you remember customizing your page, watching low quality videos late at night, or discovering random things online, you’re in the right place.</span></p>
+
+<p>I’ve always had a passion for video games since I was a kid. Some of my favorites on the <b>PS2</b> were Dave Mirra, SSX, Tony Hawk, Def Jam: Fight for NY, and War of the Monsters.</p>
+
+<p><strong>Right now I’m working on a solo game development project called <a href="#">Lorenzo</a>, inspired by that same era and everything that made those games feel special.</strong></p>
+
+<p>If you’re into the early 2000s vibe, feel free to check back in for updates — there’s more coming soon.</p>
+
+<p>Thanks for stopping by my page. I appreciate you visiting, and I hope you come back again for more nostalgia.</p>
+          <h3>Who I'd like to meet:</h3>
+          <p>I'd like to meet people who educate, inspire or entertain me... I have a few close friends I've known all my life. I'd like to make more. </p>
+        </section>
+
+        <section class="friends">
+          <header class="main-section-header">
+            <h2 class="main-section-h2">Valentino's Friend Space</h2>
+          </header>
+
+          <p><b>Valentino has <span class="focus-highlight">73090713</span> Friends.</b></p>
+
+          <div class="friend-pic-container">
+            <figure>
+              <figcaption><a href="#">Jaelyn</a></figcaption>
+              <img src="pictures/jaelyn.jpeg">
+            </figure>
+
+            <figure>
+              <figcaption><a href="#">Omar</a></figcaption>
+              <img src="pictures/omar.jpeg">
+            </figure>
+
+
+            <figure>
+              <figcaption><a href="#">Angel</a></figcaption>
+              <img src="pictures/angel.jpeg">
+            </figure>
+
+
+            <figure>
+              <figcaption><a href="#">Brian</a></figcaption>
+              <img src="pictures/brian.jpeg">
+            </figure>
+
+
+            <figure>
+              <figcaption><a href="#">Soulja Boy</a></figcaption>
+              <img src="pictures/soulja.jpeg">
+            </figure>
+
+
+            <figure>
+              <figcaption><a href="#">50 Cent</a></figcaption>
+              <img src="pictures/50.jpeg">
+            </figure>
+
+
+            <figure>
+              <figcaption><a href="#">Ice Cube</a></figcaption>
+              <img src="pictures/cube.jpeg">
+            </figure>
+
+
+            <figure>
+              <figcaption><a href="#">Tom</a></figcaption>
+              <img src="pictures/tom.jpeg">
+            </figure>
+
+          </div>
+
+          <p class="friends-list-link"><a href="#">View All of Valentino's Friends</a></p>
+        </section>
+
+        <section class="comment-wall">
+          <header class="main-section-header">
+            <h2 class="main-section-h2">Valentino's Friends Comments</h2>
+          </header>
+
+          <p id="comment-counter"><b>Displaying <span class="focus-highlight">10</span> of <span class="focus-highlight">780610</span> comments (<a href="#">View/Edit All Comments</a>)</b></p>
+
+          <table id="comment-table">
+  <tr>
+    <th scope="row">
+      <figure>
+        <figcaption><a href="#" class="comment-name"></a></figcaption>
+        <img class="comment-image" src="" alt="">
+      </figure>
+    </th>
+    <td>
+      <h3 class="comment-time"></h3>
+      <p class="comment-text"></p>
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">
+      <figure>
+        <figcaption><a href="#" class="comment-name"></a></figcaption>
+        <img class="comment-image" src="" alt="">
+      </figure>
+    </th>
+    <td>
+      <h3 class="comment-time"></h3>
+      <p class="comment-text"></p>
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">
+      <figure>
+        <figcaption><a href="#" class="comment-name"></a></figcaption>
+        <img class="comment-image" src="" alt="">
+      </figure>
+    </th>
+    <td>
+      <h3 class="comment-time"></h3>
+      <p class="comment-text"></p>
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">
+      <figure>
+        <figcaption><a href="#" class="comment-name"></a></figcaption>
+        <img class="comment-image" src="" alt="">
+      </figure>
+    </th>
+    <td>
+      <h3 class="comment-time"></h3>
+      <p class="comment-text"></p>
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">
+      <figure>
+        <figcaption><a href="#" class="comment-name"></a></figcaption>
+        <img class="comment-image" src="" alt="">
+      </figure>
+    </th>
+    <td>
+      <h3 class="comment-time"></h3>
+      <p class="comment-text"></p>
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">
+      <figure>
+        <figcaption><a href="#" class="comment-name"></a></figcaption>
+        <img class="comment-image" src="" alt="">
+      </figure>
+    </th>
+    <td>
+      <h3 class="comment-time"></h3>
+      <p class="comment-text"></p>
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">
+      <figure>
+        <figcaption><a href="#" class="comment-name"></a></figcaption>
+        <img class="comment-image" src="" alt="">
+      </figure>
+    </th>
+    <td>
+      <h3 class="comment-time"></h3>
+      <p class="comment-text"></p>
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">
+      <figure>
+        <figcaption><a href="#" class="comment-name"></a></figcaption>
+        <img class="comment-image" src="" alt="">
+      </figure>
+    </th>
+    <td>
+      <h3 class="comment-time"></h3>
+      <p class="comment-text"></p>
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">
+      <figure>
+        <figcaption><a href="#" class="comment-name"></a></figcaption>
+        <img class="comment-image" src="" alt="">
+      </figure>
+    </th>
+    <td>
+      <h3 class="comment-time"></h3>
+      <p class="comment-text"></p>
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">
+      <figure>
+        <figcaption><a href="#" class="comment-name"></a></figcaption>
+        <img class="comment-image" src="" alt="">
+      </figure>
+    </th>
+    <td>
+      <h3 class="comment-time"></h3>
+      <p class="comment-text"></p>
+    </td>
+  </tr>
+</table>
+
+<style>
+  #comment-table .comment-image {
+    display: block;
+    width: 130px;
+    height: auto;
+    max-height: 160px;
+    margin: 0 auto;
+    border: 1px solid #999;
+    background: #fff;
+  }
+
+  #comment-table .comment-name {
+    font-weight: bold;
+  }
+
+  #comment-table h3.comment-time {
+    margin: 0 0 6px 0;
+    font-size: 13px;
+  }
+
+  #comment-table p.comment-text {
+    margin: 0;
+  }
+</style>
+<script>
+  const users = [
+    {
+      realName: "Lindsay Lohan",
+      displayName: "xLiLo_x",
+      image: "pictures/lindsay_lohan.jpeg",
+      profile: "profiles/lindsay_lohan.html",
+      category: "chaotic"
+    },
+    {
+      realName: "Hilary Duff",
+      displayName: "hilary<3",
+      image: "pictures/hilary_duff.jpeg",
+      profile: "profiles/hilary_duff.html",
+      category: "sweet"
+    },
+    {
+      realName: "Amanda Bynes",
+      displayName: "amandaLOL",
+      image: "pictures/amanda_bynes.jpeg",
+      profile: "profiles/amanda_bynes.html",
+      category: "chaotic"
+    },
+    {
+      realName: "Mary-Kate Olsen",
+      displayName: "mk_olsen",
+      image: "pictures/mary_kate_olsen.jpeg",
+      profile: "profiles/mary_kate_olsen.html",
+      category: "cool"
+    },
+    {
+      realName: "Ashley Olsen",
+      displayName: "ash_olsen",
+      image: "pictures/ashley_olsen.jpeg",
+      profile: "profiles/ashley_olsen.html",
+      category: "cool"
+    },
+    {
+      realName: "Mischa Barton",
+      displayName: "oc_girl",
+      image: "pictures/mischa_barton.jpeg",
+      profile: "profiles/mischa_barton.html",
+      category: "cool"
+    },
+    {
+      realName: "Rachel Bilson",
+      displayName: "summervibes",
+      image: "pictures/rachel_bilson.jpeg",
+      profile: "profiles/rachel_bilson.html",
+      category: "sweet"
+    },
+    {
+      realName: "Chad Michael Murray",
+      displayName: "treehillking",
+      image: "pictures/chad_michael_murray.jpeg",
+      profile: "profiles/chad_michael_murray.html",
+      category: "cool"
+    },
+    {
+      realName: "James Franco",
+      displayName: "freaks_n_geeks",
+      image: "pictures/james_franco.jpeg",
+      profile: "profiles/james_franco.html",
+      category: "cool"
+    },
+    {
+      realName: "Orlando Bloom",
+      displayName: "legolasss",
+      image: "pictures/orlando_bloom.jpeg",
+      profile: "profiles/orlando_bloom.html",
+      category: "cool"
+    },
+    {
+      realName: "Elijah Wood",
+      displayName: "ringbearer",
+      image: "pictures/elijah_wood.jpeg",
+      profile: "profiles/elijah_wood.html",
+      category: "nerdy"
+    },
+    {
+      realName: "Tobey Maguire",
+      displayName: "spideyfan",
+      image: "pictures/tobey_maguire.jpeg",
+      profile: "profiles/tobey_maguire.html",
+      category: "nerdy"
+    },
+    {
+      realName: "Kirsten Dunst",
+      displayName: "mjkiss",
+      image: "pictures/kirsten_dunst.jpeg",
+      profile: "profiles/kirsten_dunst.html",
+      category: "sweet"
+    },
+    {
+      realName: "Anne Hathaway",
+      displayName: "princessdiary",
+      image: "pictures/anne_hathaway.jpeg",
+      profile: "profiles/anne_hathaway.html",
+      category: "sweet"
+    },
+    {
+      realName: "Keira Knightley",
+      displayName: "piratesbabe",
+      image: "pictures/keira_knightley.jpeg",
+      profile: "profiles/keira_knightley.html",
+      category: "cool"
+    },
+    {
+      realName: "Britney Spears",
+      displayName: "britneybby",
+      image: "pictures/britney_spears.jpeg",
+      profile: "profiles/britney_spears.html",
+      category: "pop"
+    },
+    {
+      realName: "Christina Aguilera",
+      displayName: "xtinaxx",
+      image: "pictures/christina_aguilera.jpeg",
+      profile: "profiles/christina_aguilera.html",
+      category: "pop"
+    },
+    {
+      realName: "Avril Lavigne",
+      displayName: "sk8rgrl",
+      image: "pictures/avril_lavigne.jpeg",
+      profile: "profiles/avril_lavigne.html",
+      category: "alt"
+    },
+    {
+      realName: "Ashlee Simpson",
+      displayName: "ashlee_xo",
+      image: "pictures/ashlee_simpson.jpeg",
+      profile: "profiles/ashlee_simpson.html",
+      category: "pop"
+    },
+    {
+      realName: "Jessica Simpson",
+      displayName: "jess_babe",
+      image: "pictures/jessica_simpson.jpeg",
+      profile: "profiles/jessica_simpson.html",
+      category: "sweet"
+    },
+    {
+      realName: "Beyonce",
+      displayName: "queenb",
+      image: "pictures/beyonce.jpeg",
+      profile: "profiles/beyonce.html",
+      category: "pop"
+    },
+    {
+      realName: "Alicia Keys",
+      displayName: "keys4life",
+      image: "pictures/alicia_keys.jpeg",
+      profile: "profiles/alicia_keys.html",
+      category: "music"
+    },
+    {
+      realName: "Gwen Stefani",
+      displayName: "hollabackgrl",
+      image: "pictures/gwen_stefani.jpeg",
+      profile: "profiles/gwen_stefani.html",
+      category: "alt"
+    },
+    {
+      realName: "Fergie",
+      displayName: "fergalicious",
+      image: "pictures/fergie.jpeg",
+      profile: "profiles/fergie.html",
+      category: "pop"
+    },
+    {
+      realName: "Nelly Furtado",
+      displayName: "maneater",
+      image: "pictures/nelly_furtado.jpeg",
+      profile: "profiles/nelly_furtado.html",
+      category: "pop"
+    },
+    {
+      realName: "Justin Timberlake",
+      displayName: "jt_cryme",
+      image: "pictures/justin_timberlake.jpeg",
+      profile: "profiles/justin_timberlake.html",
+      category: "pop"
+    },
+    {
+      realName: "Usher",
+      displayName: "yeahhh",
+      image: "pictures/usher.jpeg",
+      profile: "profiles/usher.html",
+      category: "music"
+    },
+    {
+      realName: "50 Cent",
+      displayName: "fiddy",
+      image: "pictures/50cent.jpeg",
+      profile: "profiles/50cent.html",
+      category: "music"
+    },
+    {
+      realName: "Eminem",
+      displayName: "shady_lp",
+      image: "pictures/eminem.jpeg",
+      profile: "profiles/eminem.html",
+      category: "music"
+    },
+    {
+      realName: "Pharrell Williams",
+      displayName: "skateboardp",
+      image: "pictures/pharrell_williams.jpeg",
+      profile: "profiles/pharrell_williams.html",
+      category: "music"
+    },
+    {
+      realName: "Gerard Way",
+      displayName: "blackparade",
+      image: "pictures/gerard_way.jpeg",
+      profile: "profiles/gerard_way.html",
+      category: "alt"
+    },
+    {
+      realName: "Pete Wentz",
+      displayName: "x_pete_x",
+      image: "pictures/pete_wentz.jpeg",
+      profile: "profiles/pete_wentz.html",
+      category: "alt"
+    },
+    {
+      realName: "Patrick Stump",
+      displayName: "sugarwerego",
+      image: "pictures/patrick_stump.jpeg",
+      profile: "profiles/patrick_stump.html",
+      category: "alt"
+    },
+    {
+      realName: "Hayley Williams",
+      displayName: "miserybiz",
+      image: "pictures/hayley_williams.jpeg",
+      profile: "profiles/hayley_williams.html",
+      category: "alt"
+    },
+    {
+      realName: "Billie Joe Armstrong",
+      displayName: "boulevardkid",
+      image: "pictures/billie_joe_armstrong.jpeg",
+      profile: "profiles/billie_joe_armstrong.html",
+      category: "alt"
+    },
+    {
+      realName: "Dave Grohl",
+      displayName: "foofighter",
+      image: "pictures/dave_grohl.jpeg",
+      profile: "profiles/dave_grohl.html",
+      category: "music"
+    },
+    {
+      realName: "Kurt Cobain",
+      displayName: "nirvana4ever",
+      image: "pictures/kurt_cobain.jpeg",
+      profile: "profiles/kurt_cobain.html",
+      category: "alt"
+    },
+    {
+      realName: "Trent Reznor",
+      displayName: "brokenhalo",
+      image: "pictures/trent_reznor.jpeg",
+      profile: "profiles/trent_reznor.html",
+      category: "alt"
+    },
+    {
+      realName: "Marilyn Manson",
+      displayName: "deadstar",
+      image: "pictures/marilyn_manson.jpeg",
+      profile: "profiles/marilyn_manson.html",
+      category: "chaotic"
+    },
+    {
+      realName: "Jared Leto",
+      displayName: "thirtysecondsto",
+      image: "pictures/jared_leto.jpeg",
+      profile: "profiles/jared_leto.html",
+      category: "alt"
+    },
+    {
+      realName: "Paris Hilton",
+      displayName: "thats_hot",
+      image: "pictures/paris_hilton.jpeg",
+      profile: "profiles/paris_hilton.html",
+      category: "pop"
+    },
+    {
+      realName: "Nicole Richie",
+      displayName: "simplelife",
+      image: "pictures/nicole_richie.jpeg",
+      profile: "profiles/nicole_richie.html",
+      category: "cool"
+    },
+    {
+      realName: "Kim Kardashian",
+      displayName: "kimmyxo",
+      image: "pictures/kim_kardashian.jpeg",
+      profile: "profiles/kim_kardashian.html",
+      category: "cool"
+    },
+    {
+      realName: "Carmen Electra",
+      displayName: "electrababe",
+      image: "pictures/carmen_electra.jpeg",
+      profile: "profiles/carmen_electra.html",
+      category: "chaotic"
+    },
+    {
+      realName: "Pamela Anderson",
+      displayName: "pammy",
+      image: "pictures/pamela_anderson.jpeg",
+      profile: "profiles/pamela_anderson.html",
+      category: "chaotic"
+    },
+    {
+      realName: "Anna Nicole Smith",
+      displayName: "anna4ever",
+      image: "pictures/anna_nicole_smith.jpeg",
+      profile: "profiles/anna_nicole_smith.html",
+      category: "chaotic"
+    },
+    {
+      realName: "Tila Tequila",
+      displayName: "tila_xo",
+      image: "pictures/tila_tequila.jpeg",
+      profile: "profiles/tila_tequila.html",
+      category: "chaotic"
+    },
+    {
+      realName: "Steve-O",
+      displayName: "stuntdude",
+      image: "pictures/steve_o.jpeg",
+      profile: "profiles/steve_o.html",
+      category: "chaotic"
+    },
+    {
+      realName: "Bam Margera",
+      displayName: "bamf",
+      image: "pictures/bam_margera.jpeg",
+      profile: "profiles/bam_margera.html",
+      category: "chaotic"
+    },
+    {
+      realName: "Johnny Knoxville",
+      displayName: "knoxv1lle",
+      image: "pictures/johnny_knoxville.jpeg",
+      profile: "profiles/johnny_knoxville.html",
+      category: "chaotic"
+    },
+    {
+      realName: "Tony Hawk",
+      displayName: "proskater",
+      image: "pictures/tony_hawk.jpeg",
+      profile: "profiles/tony_hawk.html",
+      category: "cool"
+    },
+    {
+      realName: "Jack Black",
+      displayName: "schoolofrock",
+      image: "pictures/jack_black.jpeg",
+      profile: "profiles/jack_black.html",
+      category: "chaotic"
+    }
+  ];
+
+  const commentPools = {
+  chaotic: [
+    "OMGGG ur page is sooo cute xD add me back!!! <3",
+    "rawr XD this layout is everything lol",
+    "BRB stealing this layout hahaha :)",
+    "ur page just froze my computer but idc LOL",
+    "if im not in ur top 8 we got beef >:( lol",
+    "omg i love this song on ur page!! <3",
+    "haha this page is crazy i love it XD",
+    "ur profile is sooo extra but like in a good way lol",
+    "lol i was stalking and had to comment XD",
+    "this page is wild haha luv it <3"
+  ],
+
+  pop: [
+    "omg ur profile pic is sooo cute <3",
+    "this song is my jam haha :D",
+    "lol i love this page :)",
+    "ur music taste is sooo good omg",
+    "this page is like perfect haha <3",
+    "omg add me back plz :)",
+    "this is soo my vibe lol",
+    "haha this page is poppin XD",
+    "i could stay on this page all day lol",
+    "this is sooo good <3"
+  ],
+
+  alt: [
+    "this page feels like 2006 lol <3",
+    "omg this is sooo nostalgic XD",
+    "i swear i had a page just like this haha",
+    "this layout is sick lol :)",
+    "rawr this is so cool XD",
+    "haha this reminds me of old internet days <3",
+    "yo this is actually fire lol",
+    "this is giving major throwback vibes :)",
+    "i love this layout sm haha",
+    "this is sooo myspace lol XD"
+  ],
+
+  music: [
+    "omg ur music taste is sooo good <3",
+    "this song playing is perfect haha :)",
+    "lol i love the music on here XD",
+    "ur playlist is fire haha",
+    "this page got me vibin lol <3",
+    "omg what song is this?? :O",
+    "haha this music section is sooo good",
+    "i love this song sm lol",
+    "this page sounds sooo good XD",
+    "lol i need ur playlist asap <3"
+  ],
+
+  sweet: [
+    "omggg this page is sooo cute <3",
+    "i love ur profile haha :)",
+    "this made me smile lol",
+    "ur page is adorable XD",
+    "haha this is sooo nice <3",
+    "i love everything about this page :)",
+    "this is sooo wholesome lol",
+    "ur page is perfect haha",
+    "omg i love this sm XD",
+    "this is sooo sweet <3"
+  ],
+
+  cool: [
+    "this page is clean haha <3",
+    "lol this is actually really cool :)",
+    "ur layout is sick XD",
+    "this page got style haha",
+    "yo this is dope lol",
+    "haha this page is fire <3",
+    "this is actually really good XD",
+    "ur profile is solid haha",
+    "lol this looks hella clean",
+    "this is cool af haha :)"
+  ],
+
+  nerdy: [
+    "omg this takes me back lol <3",
+    "haha i remember this stuff XD",
+    "this is so old school haha :)",
+    "yo this is like computer lab days lol",
+    "haha this is peak internet <3",
+    "this reminds me of AIM lol XD",
+    "omg nostalgia hit hard haha",
+    "this is sooo classic lol",
+    "haha this is giving 2000s vibes",
+    "this is legit old internet XD"
+  ]
+};
+  function shuffleArray(array) {
+    const copy = [...array];
+    for (let i = copy.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [copy[i], copy[j]] = [copy[j], copy[i]];
+    }
+    return copy;
+  }
+
+  function getUniqueRandomItems(array, count) {
+    return shuffleArray(array).slice(0, count);
+  }
+
+  function formatDateTime(date) {
+    let hours = date.getHours();
+    const minutes = date.getMinutes().toString().padStart(2, "0");
+    const ampm = hours >= 12 ? "PM" : "AM";
+
+    hours = hours % 12 || 12;
+
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+    const year = date.getFullYear();
+
+    return `${month}/${day}/${year} ${hours}:${minutes} ${ampm}`;
+  }
+
+  function getCommentForUser(user, usedComments) {
+    const pool = commentPools[user.category] || commentPools.cool;
+    const available = pool.filter(comment => !usedComments.has(comment));
+    const sourcePool = available.length ? available : pool;
+    const comment = sourcePool[Math.floor(Math.random() * sourcePool.length)];
+    usedComments.add(comment);
+    return comment;
+  }
+
+  function fillComments() {
+    const table = document.getElementById("comment-table");
+    if (!table) return;
+
+    const rows = table.querySelectorAll("tr");
+    const selectedUsers = getUniqueRandomItems(users, rows.length);
+    const usedComments = new Set();
+
+    const now = new Date();
+    let currentTime = new Date(
+      now.getTime() - Math.floor(Math.random() * 180) * 60000
+    );
+
+    rows.forEach((row, index) => {
+      const nameEl = row.querySelector(".comment-name");
+      const imageEl = row.querySelector(".comment-image");
+      const timeEl = row.querySelector(".comment-time");
+      const textEl = row.querySelector(".comment-text");
+
+      if (!nameEl || !imageEl || !timeEl || !textEl) return;
+
+      const user = selectedUsers[index];
+      const comment = getCommentForUser(user, usedComments);
+
+      if (index > 0) {
+        let gapMinutes;
+
+        if (index < 3) {
+          gapMinutes = Math.floor(Math.random() * 45) + 10;
+        } else if (index < 6) {
+          gapMinutes = Math.floor(Math.random() * 120) + 30;
+        } else {
+          gapMinutes = Math.floor(Math.random() * 360) + 60;
+        }
+
+        currentTime = new Date(currentTime.getTime() - gapMinutes * 60000);
+      }
+
+      nameEl.textContent = user.displayName;
+      nameEl.href = user.profile;
+      nameEl.title = user.realName;
+
+      imageEl.src = user.image;
+      imageEl.alt = user.realName;
+
+      textEl.textContent = comment;
+      timeEl.textContent = formatDateTime(currentTime);
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", fillComments);
+</script>          <p id="add-comment"><a href="#">Add Comment</a></p>
+
+        </section>
+      </main>
+
+
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+
+      <nav>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Safety Tips</a></li>
+          <li><a href="#">Contact Myspace</a></li>
+          <li><a href="#">Report Inappropriate Content</a></li>
+          <li><a href="#">Promote!</a></li>
+          <li><a href="#">Advertise</a></li>
+          <li id="last"><a href="#">MySpace International</a></li>
+        </ul>
+      </nav>
+
+      <small>©2003-2006 MySpace.com. All Rights Reserved.</small>
+    </footer>
+  </div>
+
+</body>
+
+</html>
