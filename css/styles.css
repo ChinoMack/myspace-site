@@ -106,10 +106,14 @@ Search Bar
 }
 
 .myspace-logo {
-  height: 55px;
+  height: 28px;
   width: auto;
-  margin-right: 15px;
   display: block;
+  margin-right: 8px;
+}
+.topnav.home {
+  display: flex;
+  align-items: center;
 }
 .submit-btn {
   margin: 8px;
