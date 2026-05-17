@@ -101,6 +101,13 @@ Search Bar
 .topnav.home {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
+
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+
   padding: 0;
   margin: 0;
 }
@@ -113,9 +120,13 @@ Search Bar
 }
 
 .search-bar form {
+  position: absolute;
+  left: 470px;
+  top: 22px;
+
   display: flex;
   align-items: center;
-  margin-left: 25px;
+  margin: 0;
 }
 
 .search-bar form input[type="text"] {
