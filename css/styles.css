@@ -121,7 +121,7 @@ Search Bar
 
 .search-bar form {
   position: absolute;
-  left: 370px;
+  left: 350px;
   top: 30px;
 
   display: flex;
@@ -134,19 +134,17 @@ Search Bar
 .search-bar form label {
   display: flex;
   align-items: center;
-  gap: 3px;
+  gap: 2px;
+  font-size: 11px;
 }
 
-.search-bar form input[type="text"] {
-  width: 120px;
-  height: 18px;
-}
 .search-bar form input[type="radio"] {
   margin: 0;
 }
 
 .search-bar form input[type="text"] {
-  width: 220px;
+  width: 110px;
+  height: 16px;
 }
 
 .search-bar ul {
@@ -155,13 +153,12 @@ Search Bar
 }
 
 .submit-btn {
-  margin-left: 5px;
+  margin-left: 4px;
   border: 1px solid black;
-  padding: 2px 7px;
+  padding: 1px 5px;
   background-color: #E0FFFF;
-  font-size: 10px;
-  border-color: rgb(186, 186, 186);
-}
+  font-size: 9px;
+  border-color: rgb(1
 
 .topnav {
   padding: 0;
