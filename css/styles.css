@@ -90,31 +90,26 @@ Search Bar
 ========================================
 */
 .search-bar {
-  display: grid;
-  grid-template-columns: .25fr 1fr .25fr;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
 }
 
 .search-bar form {
-  justify-self: center;
   margin: 0;
-}
-
-.search-bar form [type="text"] {
-  width: 160px;
-}
-
-.search-bar form [type="radio"] {
-  margin-right: .33rem;
 }
 
 .search-bar ul {
   display: flex;
+  align-items: center;
 }
+
 .myspace-logo {
-  height: 45px;
+  height: 55px;
   width: auto;
-  margin-left: 10px;
   margin-right: 15px;
+  display: block;
 }
 .submit-btn {
   margin: 8px;
