@@ -121,8 +121,8 @@ Search Bar
 
 .search-bar form {
   position: absolute;
-  left: 190px;
-  top: 28px;
+  left: 245px;
+  top: 36px;
 
   display: flex;
   align-items: center;
