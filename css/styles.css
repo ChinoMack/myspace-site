@@ -90,13 +90,15 @@ Search Bar
 ========================================
 */
 .search-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 5px 10px;
+  position: relative;
+  height: 110px;
+  background-color: rgb(0, 51, 153);
 }
 
 .search-bar form {
+  position: absolute;
+  right: 15px;
+  top: 18px;
   margin: 0;
 }
 
@@ -105,16 +107,24 @@ Search Bar
   align-items: center;
 }
 
-.myspace-logo {
-  height: 28px;
-  width: auto;
-  display: block;
-  margin-right: 8px;
-}
 .topnav.home {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
 }
+
+.myspace-logo {
+  height: 70px;
+  width: auto;
+  display: block;
+}
+
 .submit-btn {
   margin: 8px;
   border: 1px solid black;
@@ -130,8 +140,7 @@ Search Bar
 }
 
 .topnav li:first-child::after {
-  content: '|';
-  margin: .33rem;
+  content: '';
 }
 
 .home {
@@ -139,7 +148,9 @@ Search Bar
 }
 
 .signup {
-  justify-self: end;
+  position: absolute;
+  right: 15px;
+  bottom: 10px;
 }
 
 /*
