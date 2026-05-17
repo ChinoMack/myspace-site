@@ -121,12 +121,12 @@ Search Bar
 
 .search-bar form {
   position: absolute;
-  left: 430px;
-  top: 38px;
+  left: 500px;
+  top: 30px;
 
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
   margin: 0;
   white-space: nowrap;
 }
@@ -138,10 +138,9 @@ Search Bar
 }
 
 .search-bar form input[type="text"] {
-  width: 160px;
+  width: 120px;
   height: 18px;
 }
-
 .search-bar form input[type="radio"] {
   margin: 0;
 }
