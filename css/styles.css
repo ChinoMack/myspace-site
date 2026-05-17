@@ -119,8 +119,8 @@ Search Bar
 
 .search-bar form {
   position: absolute;
-  right: 90px;
-  top: 28px;
+  right: 115px;
+  top: 36px;
 
   display: flex;
   align-items: center;
@@ -141,7 +141,7 @@ Search Bar
 }
 
 .search-bar form input[type="text"] {
-  width: 115px;
+  width: 145px;
   height: 18px;
 }
 
