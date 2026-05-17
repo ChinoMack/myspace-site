@@ -707,3 +707,35 @@ footer small {
   font-size: 8pt;
   font-weight: normal;
 }
+
+
+
+
+.search-bar form {
+  position: absolute !important;
+  right: 70px !important;
+  left: auto !important;
+  top: 28px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  white-space: nowrap !important;
+}
+
+.search-bar form label {
+  display: flex !important;
+  align-items: center !important;
+  gap: 2px !important;
+  font-size: 11px !important;
+}
+
+.search-bar form input[type="text"] {
+  width: 90px !important;
+  height: 16px !important;
+}
+
+.submit-btn {
+  margin-left: 4px !important;
+  padding: 1px 5px !important;
+  font-size: 9px !important;
+}
