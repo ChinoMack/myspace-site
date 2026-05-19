@@ -119,10 +119,12 @@ Search Bar
 .myspace-logo-button {
   display: inline-block;
   cursor: pointer;
+
+  margin-left: 10px;
 }
 
 .myspace-logo {
-  animation: breathe 1.5s linear infinite;
+  animation: breathe 2s linear infinite;
   transform-origin: center;
 
   transition:
