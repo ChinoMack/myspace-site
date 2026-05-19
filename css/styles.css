@@ -116,6 +116,42 @@ Search Bar
   width: auto;
   display: block;
 }
+.myspace-logo-button {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.myspace-logo {
+  animation: breathe 4s ease-in-out infinite;
+  transform-origin: center;
+
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease;
+}
+
+@keyframes breathe {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.03);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.myspace-logo-button:hover .myspace-logo {
+  transform: scale(1.06);
+  filter: brightness(1.08);
+}
+
+.myspace-logo-button:active .myspace-logo {
+  transform: scale(0.97);
+}
 
 .search-bar form {
   position: absolute;
