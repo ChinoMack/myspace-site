@@ -115,21 +115,17 @@ Search Bar
   height: 55px;
   width: auto;
   display: block;
-}
-.myspace-logo-button {
-  display: inline-block;
-  cursor: pointer;
 
-  margin-left: 20px;
-}
-
-.myspace-logo {
   animation: breathe 2s linear infinite;
   transform-origin: center;
 
-  transition:
-    transform 0.2s ease,
-    filter 0.2s ease;
+  transition: filter 0.2s ease;
+}
+
+.myspace-logo-button {
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 20px;
 }
 
 @keyframes breathe {
@@ -147,12 +143,11 @@ Search Bar
 }
 
 .myspace-logo-button:hover .myspace-logo {
-  transform: scale(1.06);
   filter: brightness(1.08);
 }
 
 .myspace-logo-button:active .myspace-logo {
-  transform: scale(0.97);
+  filter: brightness(0.95);
 }
 
 .search-bar form {
