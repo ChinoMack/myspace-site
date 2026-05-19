@@ -122,7 +122,7 @@ Search Bar
 }
 
 .myspace-logo {
-  animation: breathe 4s linear infinite;
+  animation: breathe 10s linear infinite;
   transform-origin: center;
 
   transition:
@@ -132,15 +132,15 @@ Search Bar
 
 @keyframes breathe {
   0% {
-    transform: scale(1);
-  }
-
-  50% {
     transform: scale(.5);
   }
 
-  100% {
+  50% {
     transform: scale(1);
+  }
+
+  100% {
+    transform: scale(.5);
   }
 }
 
