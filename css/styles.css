@@ -122,7 +122,7 @@ Search Bar
 }
 
 .myspace-logo {
-  animation: breathe 4s ease-in-out infinite;
+  animation: breathe 2s ease-in-out infinite;
   transform-origin: center;
 
   transition:
@@ -136,7 +136,7 @@ Search Bar
   }
 
   50% {
-    transform: scale(1.03);
+    transform: scale(1.08);
   }
 
   100% {
