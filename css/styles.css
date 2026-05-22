@@ -744,14 +744,17 @@ footer small {
 
 .spinning-cursor {
   position: absolute;
-  width: 100px;
+
+  width: 260px;
   height: auto;
 
-  right: -45px;
-  bottom: -35px;
+  right: -120px;
+  bottom: -90px;
 
   image-rendering: pixelated;
+
   animation: spinCursor 1s linear infinite;
+
   transform-origin: center;
 
   pointer-events: none;
