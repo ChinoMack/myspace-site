@@ -753,11 +753,8 @@ footer small {
 
   image-rendering: pixelated;
 
-  animation: jitterCursor 0.18s infinite;
-
-  transform: scaleX(-1) scale(2.2) rotate(-35deg);
-
-  transform-origin: top left;
+  transform: rotate(-35deg) scale(-2.2, 2.2);
+  transform-origin: center;
 
   pointer-events: none;
   z-index: 5;
