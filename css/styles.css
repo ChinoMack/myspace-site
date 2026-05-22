@@ -763,22 +763,42 @@ footer small {
 }
 @keyframes spinCursor {
   0% {
-    transform: scale(8) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    transform:
+      scale(8)
+      rotate(0deg)
+      translateX(0px)
+      translateY(0px);
   }
 
   25% {
-    transform: scale(8) rotateX(90deg) rotateY(45deg) rotateZ(90deg);
+    transform:
+      scale(8)
+      rotate(90deg)
+      translateX(4px)
+      translateY(-6px);
   }
 
   50% {
-    transform: scale(8) rotateX(180deg) rotateY(90deg) rotateZ(180deg);
+    transform:
+      scale(8)
+      rotate(180deg)
+      translateX(-2px)
+      translateY(4px);
   }
 
   75% {
-    transform: scale(8) rotateX(270deg) rotateY(135deg) rotateZ(270deg);
+    transform:
+      scale(8)
+      rotate(270deg)
+      translateX(5px)
+      translateY(2px);
   }
 
   100% {
-    transform: scale(8) rotateX(360deg) rotateY(180deg) rotateZ(360deg);
+    transform:
+      scale(8)
+      rotate(360deg)
+      translateX(0px)
+      translateY(0px);
   }
 }
