@@ -745,28 +745,28 @@ footer small {
 .spinning-cursor {
   position: absolute;
 
-  width: 260px;
+  width: 22px;
   height: auto;
 
-  right: -120px;
-  bottom: -90px;
+  right: -18px;
+  bottom: -8px;
 
   image-rendering: pixelated;
 
   animation: spinCursor 1s linear infinite;
 
+  transform: scale(8);
   transform-origin: center;
 
   pointer-events: none;
   z-index: 5;
 }
-
 @keyframes spinCursor {
   from {
-    transform: rotate(0deg);
+    transform: scale(8) rotate(0deg);
   }
 
   to {
-    transform: rotate(360deg);
+    transform: scale(8) rotate(360deg);
   }
 }
