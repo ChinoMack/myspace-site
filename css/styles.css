@@ -739,3 +739,28 @@ footer small {
   font-size: 8pt;
   font-weight: normal;
 }
+
+.spinning-cursor {
+  position: absolute;
+
+  right: -25px;
+  bottom: -15px;
+
+  width: 40px;
+
+  image-rendering: pixelated;
+
+  animation: spinCursor 1s linear infinite;
+
+  pointer-events: none;
+}
+
+@keyframes spinCursor {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
