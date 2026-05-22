@@ -112,6 +112,8 @@ Search Bar
 }
 
 .myspace-logo-button {
+  position: relative;
+
   display: inline-block;
   cursor: pointer;
   margin-left: 20px;
