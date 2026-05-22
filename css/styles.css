@@ -118,9 +118,6 @@ Search Bar
   cursor: pointer;
   margin-left: 20px;
 
-  animation: breathe 2s linear infinite;
-  transform-origin: center;
-
   transition: filter 0.2s ease;
 }
 
@@ -128,6 +125,9 @@ Search Bar
   height: 55px;
   width: auto;
   display: block;
+
+  animation: breathe 2s linear infinite;
+  transform-origin: center;
 }
 
 @keyframes breathe {
@@ -744,17 +744,18 @@ footer small {
 
 .spinning-cursor {
   position: absolute;
+  width: 22px;
+  height: auto;
 
-  right: -25px;
-  bottom: -15px;
-
-  width: 40px;
+  right: -18px;
+  bottom: -8px;
 
   image-rendering: pixelated;
-
   animation: spinCursor 1s linear infinite;
+  transform-origin: center;
 
   pointer-events: none;
+  z-index: 5;
 }
 
 @keyframes spinCursor {
