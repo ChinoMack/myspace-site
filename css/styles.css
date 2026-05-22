@@ -753,52 +753,33 @@ footer small {
 
   image-rendering: pixelated;
 
-  animation: spinCursor 1s linear infinite;
-
-  transform-style: preserve-3d;
-  transform-origin: center;
+  animation: jitterCursor 0.08s infinite;
 
   pointer-events: none;
   z-index: 5;
 }
-@keyframes spinCursor {
+@keyframes jitterCursor {
   0% {
-    transform:
-      scale(8)
-      rotate(0deg)
-      translateX(0px)
-      translateY(0px);
+    transform: scale(8) translate(0px, 0px) rotate(0deg);
   }
 
-  25% {
-    transform:
-      scale(8)
-      rotate(90deg)
-      translateX(4px)
-      translateY(-6px);
+  20% {
+    transform: scale(8) translate(-1px, 1px) rotate(-2deg);
   }
 
-  50% {
-    transform:
-      scale(8)
-      rotate(180deg)
-      translateX(-2px)
-      translateY(4px);
+  40% {
+    transform: scale(8) translate(1px, -1px) rotate(2deg);
   }
 
-  75% {
-    transform:
-      scale(8)
-      rotate(270deg)
-      translateX(5px)
-      translateY(2px);
+  60% {
+    transform: scale(8) translate(-2px, 0px) rotate(-1deg);
+  }
+
+  80% {
+    transform: scale(8) translate(1px, 2px) rotate(1deg);
   }
 
   100% {
-    transform:
-      scale(8)
-      rotate(360deg)
-      translateX(0px)
-      translateY(0px);
+    transform: scale(8) translate(0px, 0px) rotate(0deg);
   }
 }
