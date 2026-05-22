@@ -742,7 +742,7 @@ footer small {
   font-weight: normal;
 }
 
-.jitter-cursor {
+.spinning-cursor {
   position: absolute;
 
   width: 22px;
