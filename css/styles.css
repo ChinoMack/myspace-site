@@ -753,7 +753,7 @@ footer small {
 
   image-rendering: pixelated;
 
-  animation: jitterCursor 0.08s infinite;
+  animation: jitterCursor 0.18s infinite;
 
   transform: scale(2.2);
 
@@ -764,26 +764,22 @@ footer small {
 }
 @keyframes jitterCursor {
   0% {
-    transform: scale(2.2) rotate(-18deg) translate(0px, 0px);
+    transform: scale(2.2) rotate(35deg) translate(0px, 0px);
   }
 
-  20% {
-    transform: scale(2.2) rotate(-18deg) translate(-0.5px, 0.5px);
+  25% {
+    transform: scale(2.2) rotate(35deg) translate(-0.3px, 0.3px);
   }
 
-  40% {
-    transform: scale(2.2) rotate(-18deg) translate(0.5px, -0.5px);
+  50% {
+    transform: scale(2.2) rotate(35deg) translate(0.3px, -0.3px);
   }
 
-  60% {
-    transform: scale(2.2) rotate(-18deg) translate(-1px, 0px);
-  }
-
-  80% {
-    transform: scale(2.2) rotate(-18deg) translate(0.5px, 1px);
+  75% {
+    transform: scale(2.2) rotate(35deg) translate(-0.3px, 0px);
   }
 
   100% {
-    transform: scale(2.2) rotate(-18deg) translate(0px, 0px);
+    transform: scale(2.2) rotate(35deg) translate(0px, 0px);
   }
 }
