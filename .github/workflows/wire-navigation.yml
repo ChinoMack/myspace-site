@@ -1,0 +1,33 @@
+name: Wire MySpace navigation
+on:
+  push:
+    paths:
+      - '.github/workflows/wire-navigation.yml'
+permissions:
+  contents: write
+jobs:
+  wire:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Wire navigation links
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          links={
+          'Home':'index.html','Browse':'browse.html','Search':'search.html','Invite':'invite.html','Film':'film.html','Mail':'mail.html','Blog':'blog.html','Favorites':'favorites.html','Forum':'forum.html','Groups':'groups.html','Events':'events.html','Videos':'videos.html','Music':'music.html','Classifieds':'classifieds.html'}
+          for name in ['index.html','music.html','classifieds.html']:
+              p=Path(name)
+              if not p.exists(): continue
+              s=p.read_text()
+              import re
+              for label,url in links.items():
+                  s=re.sub(r'<a href="[^"]*">'+re.escape(label)+r'</a>',f'<a href="{url}">{label}</a>',s,count=1)
+              p.write_text(s)
+          PY
+      - name: Commit navigation
+        run: |
+          git config user.name "ChinoMack"
+          git config user.email "actions@users.noreply.github.com"
+          git add index.html music.html classifieds.html
+          git diff --cached --quiet || (git commit -m "Connect all MySpace navigation tabs" && git push)
