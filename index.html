@@ -564,9 +564,36 @@
   }
 </style>
 <script>
-  const users = [];
-  const commentPools = {};
-  function fillComments() {}
+  const users = [
+    { displayName: "stuntdude", realName: "Steve-O", image: "pictures/steve_o.jpeg", profile: "#", category: "chaotic" },
+    { displayName: "bamf", realName: "Bam Margera", image: "pictures/bam_margera.jpeg", profile: "#", category: "alt" },
+    { displayName: "knoxv1lle", realName: "Johnny Knoxville", image: "pictures/johnny_knoxville.jpeg", profile: "#", category: "chaotic" },
+    { displayName: "proskater", realName: "Tony Hawk", image: "pictures/tony_hawk.jpeg", profile: "#", category: "alt" },
+    { displayName: "schoolofrock", realName: "Jack Black", image: "pictures/jack_black.jpeg", profile: "#", category: "music" }
+  ];
+  const commentPools = {
+    chaotic: ["omg ur page is soooo cute add me back!!!", "BRB STEALING THIS LAYOUT"],
+    pop: ["ur display pic goes HARD"],
+    alt: ["love the old web energy"],
+    music: ["love the music taste on here"]
+  };
+  function fillComments() {
+    const rows = document.querySelectorAll("#comment-table tr");
+    rows.forEach(function(row, i) {
+      const user = users[i % users.length];
+      const pool = commentPools[user.category] || commentPools.alt;
+      const nameEl = row.querySelector(".comment-name");
+      const imageEl = row.querySelector(".comment-image");
+      const timeEl = row.querySelector(".comment-time");
+      const textEl = row.querySelector(".comment-text");
+      nameEl.textContent = user.displayName;
+      nameEl.href = user.profile;
+      imageEl.src = user.image;
+      imageEl.alt = user.realName;
+      timeEl.textContent = i < 5 ? "Sep 21, 2026  " + (8 - i) + ":0" + (i + 1) + " PM" : "Sep 20, 2026  " + (9 - (i % 4)) + ":2" + (i % 10) + " PM";
+      textEl.textContent = pool[i % pool.length];
+    });
+  }
   document.addEventListener("DOMContentLoaded", fillComments);
 </script>          <p id="add-comment"><a href="#">Add Comment</a></p>
 
