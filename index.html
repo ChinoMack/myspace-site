@@ -139,6 +139,27 @@
           <p class="pics-videos">View My: <a href="#"><b>Pics</b></a> | <a href="#"><b>Videos</b></a></p>
         </div>
 
+        <!-- Classic MySpace profile song player -->
+        <section class="profile-music-player" style="border:1px solid #6698cb;background:#f2f2f2;padding:6px;margin:8px 0 10px 0;font:11px Arial,sans-serif;box-sizing:border-box;width:100%;">
+          <div style="background:#6698cb;color:#fff;font-weight:bold;padding:4px 6px;margin:-6px -6px 6px;">Valentino's Profile Song</div>
+          <div style="font-weight:bold;margin-bottom:4px;">Tie Me Down — New Boyz ft. Ray J</div>
+          <audio id="profileSong" controls autoplay preload="auto" style="display:block;width:100%;height:30px;">
+            <source src="Music/Tie%20Me%20Down%20lyrics%20-%20New%20Boyz%20Ft.%20Ray-J%20-%20xMissEBKx%20(youtube).mp3" type="audio/mpeg">
+          </audio>
+          <div id="profileSongStatus" style="font-size:10px;color:#555;margin-top:3px;">♪ Profile music</div>
+        </section>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const song = document.getElementById("profileSong");
+            const status = document.getElementById("profileSongStatus");
+            if (!song) return;
+            song.volume = 0.8;
+            const p = song.play();
+            if (p && p.catch) p.catch(function () { status.textContent = "♪ Tap play to hear Valentino's profile song"; });
+          });
+        </script>
+
         <!-- Contact Box -->
         <section class="contact-box">
           <h2>Contacting Valentino</h2>
@@ -255,47 +276,6 @@
           </table>
         </section>
 
-        <!-- Valentino's Schools Section -->
-        <section class="schools">
-          <table class="sidebar-table">
-
-            <caption>
-              <h2 class="sidebar-table-h2">Valentino's Schools</h2>
-            </caption>
-
-            <tbody>
-              <tr>
-                <th class="sidebar-table-header" scope="row">
-                  <ul>
-                    <li><a href="#">Cappuchino High School</a></li>
-                    <li>San Bruno, CALIFORNIA</li>
-                    <li>Graduated: <a href="#">2014</a></li>
-                    <li>Degree: High School Diploma</li>
-                    <li>Major: Business</li>
-                  </ul>
-                </th>
-                <td class="sidebar-table-data">2014 to 2012</td>
-              </tr>
-
-              <tr>
-                <th class="sidebar-table-header" scope="row">
-                  <ul>
-                    <li><a href="#">Arroyo High School</a></li>
-                    <li>San Lorenzo, CALIFORNIA</li>
-                    <li>Graduated: <a href="#">2012</a></li>
-                    <li>Student status: Alumni</li>
-                    <li>Degree: High School Diploma</li>
-                    <li>Major: Computer Science</li>
-                    <li>Clubs: Photography</li>
-                  </ul>
-                </th>
-                <td class="sidebar-table-data">2012 to 2010</td>
-              </tr>
-
-            </tbody>
-          </table>
-
-        </section>
       </aside>
       <!-- Profile Side Bar Ends -->
 
