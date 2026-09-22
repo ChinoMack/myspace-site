@@ -762,6 +762,14 @@
       category: "pop"
     },
     {
+      realName: "Lil Bow Wow",
+      displayName: "lilbowwow614",
+      image: "pictures/lil_bow_wow.jpeg",
+      profile: "#",
+      category: "music",
+      customComment: "yo V this page crazy lol keep doin ya thing homie"
+    },
+    {
       realName: "Justin Timberlake",
       displayName: "jt_cryme",
       image: "pictures/justin_timberlake.jpeg",
@@ -1065,6 +1073,10 @@
        return `${month}/${day}/${year} ${hours}:${minutes} ${ampm}`;
   }
      function getCommentForUser(user, usedComments) {
+    if (user.customComment && !usedComments.has(user.customComment)) {
+      usedComments.add(user.customComment);
+      return user.customComment;
+    }
     const pool = commentPools[user.category] || commentPools.cool;
     const available = pool.filter(comment => !usedComments.has(comment));
     const sourcePool = available.length ? available : pool;
