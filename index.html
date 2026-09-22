@@ -156,7 +156,28 @@
             if (!song) return;
             song.volume = 0.8;
             const p = song.play();
-            if (p && p.catch) p.catch(function () { status.textContent = "♪ Tap play to hear Valentino's profile song"; });
+            if (p && p.catch) p.catch(function () { status.textContent = "♪ Tap anywhere to hear Valentino's profile song"; });
+
+            // iPhone/Safari blocks audible autoplay until the first user interaction.
+            // Start the profile song on the visitor's first tap/click/key press anywhere.
+            function startProfileSong() {
+              if (!song.paused) return cleanupProfileSongStart();
+              const attempt = song.play();
+              if (attempt && attempt.then) {
+                attempt.then(function () {
+                  status.textContent = "♪ Now playing: Tie Me Down";
+                  cleanupProfileSongStart();
+                }).catch(function () {});
+              }
+            }
+            function cleanupProfileSongStart() {
+              document.removeEventListener("pointerdown", startProfileSong);
+              document.removeEventListener("touchstart", startProfileSong);
+              document.removeEventListener("keydown", startProfileSong);
+            }
+            document.addEventListener("pointerdown", startProfileSong, { passive: true });
+            document.addEventListener("touchstart", startProfileSong, { passive: true });
+            document.addEventListener("keydown", startProfileSong);
           });
         </script>
 
