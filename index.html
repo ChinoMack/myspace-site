@@ -308,6 +308,39 @@
           </header>
         </section>
 
+        <!-- Classic MySpace profile song player -->
+        <section class="profile-music-player" style="border:1px solid #999;background:#f2f2f2;padding:8px;margin:10px 0;font:12px Arial,sans-serif;">
+          <div style="background:#6698cb;color:#fff;font-weight:bold;padding:4px 6px;margin:-8px -8px 8px;">Valentino's Profile Song</div>
+          <div style="font-weight:bold;margin-bottom:5px;">Tie Me Down — New Boyz ft. Ray J</div>
+          <audio id="profileSong" controls autoplay preload="auto" style="width:100%;height:32px;">
+            <source src="Music/Tie%20Me%20Down%20lyrics%20-%20New%20Boyz%20Ft.%20Ray-J%20-%20xMissEBKx%20(youtube).mp3" type="audio/mpeg">
+            Your browser does not support HTML5 audio.
+          </audio>
+          <div id="profileSongStatus" style="font-size:10px;color:#555;margin-top:4px;">♪ Profile music</div>
+        </section>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const song = document.getElementById("profileSong");
+            const status = document.getElementById("profileSongStatus");
+            if (!song) return;
+            song.volume = 0.8;
+            const attempt = song.play();
+            if (attempt && attempt.catch) {
+              attempt.catch(function () {
+                status.textContent = "♪ Tap play to hear Valentino's profile song";
+                const startSong = function () {
+                  song.play().catch(function () {});
+                  document.removeEventListener("click", startSong);
+                  document.removeEventListener("touchstart", startSong);
+                };
+                document.addEventListener("click", startSong, { once: true });
+                document.addEventListener("touchstart", startSong, { once: true });
+              });
+            }
+          });
+        </script>
+
         <section class="blog">
             <h3>Valentino's Latest Blog Entry <a href="#">[Subscribe to this Blog]</a></h3>
 
