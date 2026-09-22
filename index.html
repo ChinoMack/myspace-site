@@ -344,6 +344,19 @@
 
           <p><b>Valentino has <span class="focus-highlight">73090713</span> Friends.</b></p>
 
+          <style>
+            /* Keep Friend Space locked to the original 4 x 2 MySpace grid. */
+            .friends { width: 433px; }
+            .friends .friend-pic-container {
+              display: grid !important;
+              grid-template-columns: repeat(4, 109px) !important;
+              grid-template-rows: 160px 193px !important;
+              width: 436px !important;
+            }
+            .friends .friend-pic-container figure { width:109px !important; margin:0 !important; }
+            .friends .friend-pic-container img { max-width:100px; max-height:140px; object-fit:cover; }
+          </style>
+
           <div class="friend-pic-container">
             <figure>
               <figcaption><a href="#">Jaelyn</a></figcaption>
