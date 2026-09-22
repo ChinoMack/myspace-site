@@ -565,37 +565,532 @@
 </style>
 <script>
   const users = [
-    { displayName: "stuntdude", realName: "Steve-O", image: "pictures/steve_o.jpeg", profile: "#", category: "chaotic" },
-    { displayName: "bamf", realName: "Bam Margera", image: "pictures/bam_margera.jpeg", profile: "#", category: "alt" },
-    { displayName: "knoxv1lle", realName: "Johnny Knoxville", image: "pictures/johnny_knoxville.jpeg", profile: "#", category: "chaotic" },
-    { displayName: "proskater", realName: "Tony Hawk", image: "pictures/tony_hawk.jpeg", profile: "#", category: "alt" },
-    { displayName: "schoolofrock", realName: "Jack Black", image: "pictures/jack_black.jpeg", profile: "#", category: "music" }
+    {
+      realName: "Lindsay Lohan",
+      displayName: "xLiLo_x",
+      image: "pictures/lindsay_lohan.jpeg",
+      profile: "profiles/lindsay_lohan.html",
+      category: "chaotic"
+    },
+    {
+      realName: "Hilary Duff",
+      displayName: "hilary<3",
+      image: "pictures/hilary_duff.jpeg",
+      profile: "profiles/hilary_duff.html",
+      category: "sweet"
+    },
+    {
+      realName: "Amanda Bynes",
+      displayName: "amandaLOL",
+      image: "pictures/amanda_bynes.jpeg",
+      profile: "profiles/amanda_bynes.html",
+      category: "chaotic"
+    },
+    {
+      realName: "Mary-Kate Olsen",
+      displayName: "mk_olsen",
+      image: "pictures/mary_kate_olsen.jpeg",
+      profile: "profiles/mary_kate_olsen.html",
+      category: "cool"
+    },
+    {
+      realName: "Ashley Olsen",
+      displayName: "ash_olsen",
+      image: "pictures/ashley_olsen.jpeg",
+      profile: "profiles/ashley_olsen.html",
+      category: "cool"
+    },
+    {
+      realName: "Mischa Barton",
+      displayName: "oc_girl",
+      image: "pictures/mischa_barton.jpeg",
+      profile: "profiles/mischa_barton.html",
+      category: "cool"
+    },
+    {
+      realName: "Rachel Bilson",
+      displayName: "summervibes",
+      image: "pictures/rachel_bilson.jpeg",
+      profile: "profiles/rachel_bilson.html",
+      category: "sweet"
+    },
+    {
+      realName: "Chad Michael Murray",
+      displayName: "treehillking",
+      image: "pictures/chad_michael_murray.jpeg",
+      profile: "profiles/chad_michael_murray.html",
+      category: "cool"
+    },
+    {
+      realName: "James Franco",
+      displayName: "freaks_n_geeks",
+      image: "pictures/james_franco.jpeg",
+      profile: "profiles/james_franco.html",
+      category: "cool"
+    },
+    {
+      realName: "Orlando Bloom",
+      displayName: "legolasss",
+      image: "pictures/orlando_bloom.jpeg",
+      profile: "profiles/orlando_bloom.html",
+      category: "cool"
+    },
+    {
+      realName: "Elijah Wood",
+      displayName: "ringbearer",
+      image: "pictures/elijah_wood.jpeg",
+      profile: "profiles/elijah_wood.html",
+      category: "nerdy"
+    },
+    {
+      realName: "Tobey Maguire",
+      displayName: "spideyfan",
+      image: "pictures/tobey_maguire.jpeg",
+      profile: "profiles/tobey_maguire.html",
+      category: "nerdy"
+    },
+    {
+      realName: "Kirsten Dunst",
+      displayName: "mjkiss",
+      image: "pictures/kirsten_dunst.jpeg",
+      profile: "profiles/kirsten_dunst.html",
+      category: "sweet"
+    },
+    {
+      realName: "Anne Hathaway",
+      displayName: "princessdiary",
+      image: "pictures/anne_hathaway.jpeg",
+      profile: "profiles/anne_hathaway.html",
+      category: "sweet"
+    },
+    {
+      realName: "Keira Knightley",
+      displayName: "piratesbabe",
+      image: "pictures/keira_knightley.jpeg",
+      profile: "profiles/keira_knightley.html",
+      category: "cool"
+    },
+    {
+      realName: "Britney Spears",
+      displayName: "britneybby",
+      image: "pictures/britney_spears.jpeg",
+      profile: "profiles/britney_spears.html",
+      category: "pop"
+    },
+    {
+      realName: "Christina Aguilera",
+      displayName: "xtinaxx",
+      image: "pictures/christina_aguilera.jpeg",
+      profile: "profiles/christina_aguilera.html",
+      category: "pop"
+    },
+    {
+      realName: "Avril Lavigne",
+      displayName: "sk8rgrl",
+      image: "pictures/avril_lavigne.jpeg",
+      profile: "profiles/avril_lavigne.html",
+      category: "alt"
+    },
+    {
+      realName: "Ashlee Simpson",
+      displayName: "ashlee_xo",
+      image: "pictures/ashlee_simpson.jpeg",
+      profile: "profiles/ashlee_simpson.html",
+      category: "pop"
+    },
+    {
+      realName: "Jessica Simpson",
+      displayName: "jess_babe",
+      image: "pictures/jessica_simpson.jpeg",
+      profile: "profiles/jessica_simpson.html",
+      category: "sweet"
+    },
+    {
+      realName: "Beyonce",
+      displayName: "queenb",
+      image: "pictures/beyonce.jpeg",
+      profile: "profiles/beyonce.html",
+      category: "pop"
+    },
+    {
+      realName: "Alicia Keys",
+      displayName: "keys4life",
+      image: "pictures/alicia_keys.jpeg",
+      profile: "profiles/alicia_keys.html",
+      category: "music"
+    },
+    {
+      realName: "Gwen Stefani",
+      displayName: "hollabackgrl",
+      image: "pictures/gwen_stefani.jpeg",
+      profile: "profiles/gwen_stefani.html",
+      category: "alt"
+    },
+    {
+      realName: "Fergie",
+      displayName: "fergalicious",
+      image: "pictures/fergie.jpeg",
+      profile: "profiles/fergie.html",
+      category: "pop"
+    },
+    {
+      realName: "Nelly Furtado",
+      displayName: "maneater",
+      image: "pictures/nelly_furtado.jpeg",
+      profile: "profiles/nelly_furtado.html",
+      category: "pop"
+    },
+    {
+      realName: "Justin Timberlake",
+      displayName: "jt_cryme",
+      image: "pictures/justin_timberlake.jpeg",
+      profile: "profiles/justin_timberlake.html",
+      category: "pop"
+    },
+    {
+      realName: "Usher",
+      displayName: "yeahhh",
+      image: "pictures/usher.jpeg",
+      profile: "profiles/usher.html",
+      category: "music"
+    },
+    {
+      realName: "50 Cent",
+      displayName: "fiddy",
+      image: "pictures/50cent.jpeg",
+      profile: "profiles/50cent.html",
+      category: "music"
+    },
+    {
+      realName: "Eminem",
+      displayName: "shady_lp",
+      image: "pictures/eminem.jpeg",
+      profile: "profiles/eminem.html",
+      category: "music"
+    },
+    {
+      realName: "Pharrell Williams",
+      displayName: "skateboardp",
+      image: "pictures/pharrell_williams.jpeg",
+      profile: "profiles/pharrell_williams.html",
+      category: "music"
+    },
+    {
+      realName: "Gerard Way",
+      displayName: "blackparade",
+      image: "pictures/gerard_way.jpeg",
+      profile: "profiles/gerard_way.html",
+      category: "alt"
+    },
+    {
+      realName: "Pete Wentz",
+      displayName: "x_pete_x",
+      image: "pictures/pete_wentz.jpeg",
+      profile: "profiles/pete_wentz.html",
+      category: "alt"
+    },
+    {
+      realName: "Patrick Stump",
+      displayName: "sugarwerego",
+      image: "pictures/patrick_stump.jpeg",
+      profile: "profiles/patrick_stump.html",
+      category: "alt"
+    },
+    {
+      realName: "Hayley Williams",
+      displayName: "miserybiz",
+      image: "pictures/hayley_williams.jpeg",
+      profile: "profiles/hayley_williams.html",
+      category: "alt"
+    },
+    {
+      realName: "Billie Joe Armstrong",
+      displayName: "boulevardkid",
+      image: "pictures/billie_joe_armstrong.jpeg",
+      profile: "profiles/billie_joe_armstrong.html",
+      category: "alt"
+    },
+    {
+      realName: "Dave Grohl",
+      displayName: "foofighter",
+      image: "pictures/dave_grohl.jpeg",
+      profile: "profiles/dave_grohl.html",
+      category: "music"
+    },
+    {
+      realName: "Kurt Cobain",
+      displayName: "nirvana4ever",
+      image: "pictures/kurt_cobain.jpeg",
+      profile: "profiles/kurt_cobain.html",
+      category: "alt"
+    },
+    {
+      realName: "Trent Reznor",
+      displayName: "brokenhalo",
+      image: "pictures/trent_reznor.jpeg",
+      profile: "profiles/trent_reznor.html",
+      category: "alt"
+    },
+    {
+      realName: "Marilyn Manson",
+      displayName: "deadstar",
+      image: "pictures/marilyn_manson.jpeg",
+      profile: "profiles/marilyn_manson.html",
+      category: "chaotic"
+    },
+    {
+      realName: "Jared Leto",
+      displayName: "thirtysecondsto",
+      image: "pictures/jared_leto.jpeg",
+      profile: "profiles/jared_leto.html",
+      category: "alt"
+    },
+    {
+      realName: "Paris Hilton",
+      displayName: "thats_hot",
+      image: "pictures/paris_hilton.jpeg",
+      profile: "profiles/paris_hilton.html",
+      category: "pop"
+    },
+    {
+      realName: "Nicole Richie",
+      displayName: "simplelife",
+      image: "pictures/nicole_richie.jpeg",
+      profile: "profiles/nicole_richie.html",
+      category: "cool"
+    },
+    {
+      realName: "Kim Kardashian",
+      displayName: "kimmyxo",
+      image: "pictures/kim_kardashian.jpeg",
+      profile: "profiles/kim_kardashian.html",
+      category: "cool"
+    },
+    {
+      realName: "Carmen Electra",
+      displayName: "electrababe",
+      image: "pictures/carmen_electra.jpeg",
+      profile: "profiles/carmen_electra.html",
+      category: "chaotic"
+    },
+    {
+      realName: "Pamela Anderson",
+      displayName: "pammy",
+      image: "pictures/pamela_anderson.jpeg",
+      profile: "profiles/pamela_anderson.html",
+      category: "chaotic"
+    },
+    {
+      realName: "Anna Nicole Smith",
+      displayName: "anna4ever",
+      image: "pictures/anna_nicole_smith.jpeg",
+      profile: "profiles/anna_nicole_smith.html",
+      category: "chaotic"
+    },
+    {
+      realName: "Tila Tequila",
+      displayName: "tila_xo",
+      image: "pictures/tila_tequila.jpeg",
+      profile: "profiles/tila_tequila.html",
+      category: "chaotic"
+    },
+    {
+      realName: "Steve-O",
+      displayName: "stuntdude",
+      image: "pictures/steve_o.jpeg",
+      profile: "profiles/steve_o.html",
+      category: "chaotic"
+    },
+    {
+      realName: "Bam Margera",
+      displayName: "bamf",
+      image: "pictures/bam_margera.jpeg",
+      profile: "profiles/bam_margera.html",
+      category: "chaotic"
+    },
+    {
+      realName: "Johnny Knoxville",
+      displayName: "knoxv1lle",
+      image: "pictures/johnny_knoxville.jpeg",
+      profile: "profiles/johnny_knoxville.html",
+      category: "chaotic"
+    },
+    {
+      realName: "Tony Hawk",
+      displayName: "proskater",
+      image: "pictures/tony_hawk.jpeg",
+      profile: "profiles/tony_hawk.html",
+      category: "cool"
+    },
+    {
+      realName: "Jack Black",
+      displayName: "schoolofrock",
+      image: "pictures/jack_black.jpeg",
+      profile: "profiles/jack_black.html",
+      category: "chaotic"
+    }
   ];
-  const commentPools = {
-    chaotic: ["omg ur page is soooo cute add me back!!!", "BRB STEALING THIS LAYOUT"],
-    pop: ["ur display pic goes HARD"],
-    alt: ["love the old web energy"],
-    music: ["love the music taste on here"]
+     const commentPools = {
+    chaotic: [
+      "omg ur page is soooo cute add me back!!!",
+      "rawr xD this layout is everything",
+      "BRB STEALING THIS LAYOUT",
+      "ur page just crashed my computer but worth it tbh",
+      "if im not in ur top 8 we got problems",
+      "im stealing ur whole vibe idc",
+      "not me refreshing hoping u posted something new",
+      "this page feels illegal in 2026 💀",
+      "this layout is doing too much and i love it",
+      "this is the kind of profile that starts beef",
+      "i just know ur comments were wild back then",
+      "this whole thing feels cursed in the best way",
+      "this page got that sketchy internet charm",
+      "ok yeah u cooked with this one",
+      "this page feels alive bro",
+      "this layout is screaming at me but i like it"
+    ],
+    pop: [
+      "ur display pic goes HARD",
+      "this song on ur profile??? instant vibe",
+      "ur music taste is actually elite",
+      "ok this profile kinda iconic",
+      "this page is straight vibes",
+      "this would've been an instant add",
+      "the profile song better stay on repeat",
+      "this whole page is so extra and i love it",
+      "ur layout is literally serving",
+      "this page feels famous lol"
+    ],
+    alt: [
+      "love the old web energy",
+      "this page got that haunted internet energy",
+      "i swear ive seen this exact layout in 2007",
+      "yo this is nostalgic af",
+      "this feels like limewire era internet",
+      "this is peak internet idc",
+      "ur page is giving top 8 fights energy",
+      "this is so chaotic i love it",
+      "this layout got that vintage internet feel",
+      "this is EXACTLY how i remember myspace"
+    ],
+    music: [
+      "love the music taste on here",
+      "throwback music section is elite",
+      "this profile song choices better be good lol",
+      "old youtube really was a different world",
+      "okay this page actually feels real",
+      "ur page got soul",
+      "this is making me wanna rebuild my playlist",
+      "the bands on here are so valid",
+      "this page sounds cool even muted lol",
+      "the music section is lowkey perfect"
+    ],
+    sweet: [
+      "omg this page is sooo cute",
+      "your layout came out so good omg",
+      "lowkey obsessed with this profile",
+      "this page is giving main character energy",
+      "this made me weirdly nostalgic",
+      "this profile feels like a time capsule",
+      "the vibes are actually immaculate",
+      "this page just unlocked my childhood",
+      "i stayed on this page way too long lol",
+      "this is what the internet should be"
+    ],
+    cool: [
+      "this setup is clean as hell",
+      "the aesthetic on this page is perfect",
+      "this is way cooler than modern social media",
+      "this page got more personality than instagram ever will",
+      "this whole vibe is unmatched",
+      "this is the kind of profile u flex to friends",
+      "ur page got personality fr",
+      "this page is legendary already",
+      "this profile is literally art",
+      "yo this is way too accurate"
+    ],
+    nerdy: [
+      "PS2 era gaming really was undefeated",
+      "this takes me straight back to 2006",
+      "ur profile makes me wanna log into AIM",
+      "this is giving after school computer lab vibes",
+      "i can hear the dial up noise looking at this",
+      "this page just time traveled me",
+      "this feels like an internet relic",
+      "this page is doing everything right",
+      "this is peak nostalgia farming",
+      "i cant stop scrolling this page"
+    ]
   };
-  function fillComments() {
-    const rows = document.querySelectorAll("#comment-table tr");
-    rows.forEach(function(row, i) {
-      const user = users[i % users.length];
-      const pool = commentPools[user.category] || commentPools.alt;
+     function shuffleArray(array) {
+    const copy = [...array];
+    for (let i = copy.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [copy[i], copy[j]] = [copy[j], copy[i]];
+    }
+    return copy;
+  }
+     function getUniqueRandomItems(array, count) {
+    return shuffleArray(array).slice(0, count);
+  }
+     function formatDateTime(date) {
+    let hours = date.getHours();
+    const minutes = date.getMinutes().toString().padStart(2, "0");
+    const ampm = hours >= 12 ? "PM" : "AM";
+       hours = hours % 12 || 12;
+       const month = date.getMonth() + 1;
+    const day = date.getDate();
+    const year = date.getFullYear();
+       return `${month}/${day}/${year} ${hours}:${minutes} ${ampm}`;
+  }
+     function getCommentForUser(user, usedComments) {
+    const pool = commentPools[user.category] || commentPools.cool;
+    const available = pool.filter(comment => !usedComments.has(comment));
+    const sourcePool = available.length ? available : pool;
+    const comment = sourcePool[Math.floor(Math.random() * sourcePool.length)];
+    usedComments.add(comment);
+    return comment;
+  }
+     function fillComments() {
+    const table = document.getElementById("comment-table");
+    if (!table) return;
+       const rows = table.querySelectorAll("tr");
+    const selectedUsers = getUniqueRandomItems(users, rows.length);
+    const usedComments = new Set();
+       const now = new Date();
+    let currentTime = new Date(
+      now.getTime() - Math.floor(Math.random() * 180) * 60000
+    );
+       rows.forEach((row, index) => {
       const nameEl = row.querySelector(".comment-name");
       const imageEl = row.querySelector(".comment-image");
       const timeEl = row.querySelector(".comment-time");
       const textEl = row.querySelector(".comment-text");
-      nameEl.textContent = user.displayName;
+         if (!nameEl || !imageEl || !timeEl || !textEl) return;
+         const user = selectedUsers[index];
+      const comment = getCommentForUser(user, usedComments);
+         if (index > 0) {
+        let gapMinutes;
+           if (index < 3) {
+          gapMinutes = Math.floor(Math.random() * 45) + 10;
+        } else if (index < 6) {
+          gapMinutes = Math.floor(Math.random() * 120) + 30;
+        } else {
+          gapMinutes = Math.floor(Math.random() * 360) + 60;
+        }
+           currentTime = new Date(currentTime.getTime() - gapMinutes * 60000);
+      }
+         nameEl.textContent = user.displayName;
       nameEl.href = user.profile;
-      imageEl.src = user.image;
+      nameEl.title = user.realName;
+         imageEl.src = user.image;
       imageEl.alt = user.realName;
-      timeEl.textContent = i < 5 ? "Sep 21, 2026  " + (8 - i) + ":0" + (i + 1) + " PM" : "Sep 20, 2026  " + (9 - (i % 4)) + ":2" + (i % 10) + " PM";
-      textEl.textContent = pool[i % pool.length];
+         textEl.textContent = comment;
+      timeEl.textContent = formatDateTime(currentTime);
     });
   }
-  document.addEventListener("DOMContentLoaded", fillComments);
-</script>          <p id="add-comment"><a href="#">Add Comment</a></p>
+     document.addEventListener("DOMContentLoaded", fillComments);
+  </script>          <p id="add-comment"><a href="#">Add Comment</a></p>
 
         </section>
       </main>
